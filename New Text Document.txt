@@ -1,0 +1,20 @@
+Deployment ID
+AKfycbwCPEcAbtsZzdEoe1ymU8nUsshwBV1Ao1C5jrdnCMhJy64IWtMfAZy5ZACFdTwyNNze2g
+
+
+WEB APP URL
+
+https://script.google.com/macros/s/AKfycbwCPEcAbtsZzdEoe1ymU8nUsshwBV1Ao1C5jrdnCMhJy64IWtMfAZy5ZACFdTwyNNze2g/exec
+
+new
+https://script.google.com/macros/s/AKfycbwCPEcAbtsZzdEoe1ymU8nUsshwBV1Ao1C5jrdnCMhJy64IWtMfAZy5ZACFdTwyNNze2g/exec
+
+Library URL
+
+https://script.google.com/macros/library/d/1Ylqps5NpoBMIGUORqNJEx-S2xtKU_RM4a_ykuHUsmdpqMpWlnoAcXfgV/2
+
+
+
+publish sheet
+
+https://docs.google.com/spreadsheets/d/1vojIUYfJ9l1fvdK_1QogxuCCBfoA-EkVf0tamSLiMuM/pubhtml?gid=0&single=true

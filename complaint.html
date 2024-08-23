@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodge a Complaint</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    async function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        var formData = new FormData(event.target);
+        
+        try {
+            let response = await fetch("https://script.google.com/macros/s/AKfycbwCPEcAbtsZzdEoe1ymU8nUsshwBV1Ao1C5jrdnCMhJy64IWtMfAZy5ZACFdTwyNNze2g/exec", {
+                method: 'POST',
+                body: formData
+            });
+
+            let result = await response.text();
+            
+            // Display the reference ID in a message
+            alert(result); // Show the reference ID in an alert
+            
+            // Clear the form fields
+            event.target.reset(); // Clear the form fields
+            
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+</script>
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/hero-background.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #007BFF;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #fff;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            background-color: #444;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .full-width {
+            grid-column: 1 / 3;
+        }
+
+        .submit-btn {
+            grid-column: 1 / 3;
+            text-align: center;
+        }
+
+        .submit-btn button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .submit-btn button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="image/logo.png" alt="Anti-Ragging Squad Logo">
+        </div>
+        <h1>Anti-Ragging Squad</h1>
+	<h1>Haldia Institute of Technology</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="complaint.html">Lodge a Complaint</a></li>
+            <li><a href="login.html">Members Area</a></li>
+            <li><a href="report.html">Report Status</a></li>
+	    <li><a href="member.html">committee Member</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Lodge a Complaint</h2>
+        <form onsubmit="handleSubmit(event)">
+    <div>
+        <label for="category">Complaint Category*</label>
+        <select id="category" name="category" required>
+            <option value="Ragging">Ragging</option>
+            <option value="Torture">Torture</option>
+            <option value="Bullying">Bullying</option>
+            <option value="Harassment">Harassment</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label for="name">Victim's Name*</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="mobile">Victim's Mobile No.*</label>
+        <input type="tel" id="mobile" name="mobile" required>
+    </div>
+    <div>
+        <label for="email">Victim's Email*</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="gender">Victim's Gender*</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label for="caste">Victim's Caste*</label>
+        <input type="text" id="caste" name="caste" required>
+    </div>
+    <div>
+        <label for="department">Victim's Department Name*</label>
+        <input type="text" id="department" name="department" required>
+    </div>
+    <div>
+        <label for="batch">Batch Name</label>
+        <input type="text" id="batch" name="batch">
+    </div>
+    <div>
+        <label for="roll">Victim's College Roll Number*</label>
+        <input type="text" id="roll" name="roll" required>
+    </div>
+    <div class="full-width">
+        <label for="address">Victim's Address*</label>
+        <input type="text" id="address" name="address" required>
+    </div>
+    <div class="full-width">
+        <label for="details">Ragging Details*</label>
+        <textarea id="details" name="details" required></textarea>
+    </div>
+    <div class="submit-btn">
+        <button type="submit">Submit Complaint</button>
+    </div>
+</form>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anti-Ragging Squad. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
