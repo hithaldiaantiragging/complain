@@ -21,8 +21,7 @@ header {
 }
 
 header h1 {
-  font-size: 3vw;
-  max-font-size: 50px;
+    font-size: 3rem; /* Use rem or px for consistent sizing */
 }
 
 /* For mobile devices */
