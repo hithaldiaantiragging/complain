@@ -24,8 +24,6 @@
             border-bottom: 5px solid #007BFF;
         }
 
-
-
         .logo-container {
             position: absolute;
             top: 20px;
@@ -36,7 +34,6 @@
             overflow: hidden;
             border: 3px solid #fff;
         }
-
 
         .logo-container img {
             width: 100%;
@@ -141,8 +138,7 @@
             <img src="image/logo.png" alt="Anti-Ragging Squad Logo">
         </div>
         <h1>Anti-Ragging Complaint Portal</h1>
-        <h1>Haldia Institute of Technology</h1>
-
+        <h2>Haldia Institute of Technology</h2>
     </header>
 
     <nav>
@@ -188,13 +184,12 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    'username': username,
-                    'password': password
+                    username: username,
+                    password: password
                 })
             })
             .then(response => response.json())
             .then(data => {
-                document.getElementById('response').textContent = data.message;
                 if (data.status === "success") {
                     window.location.href = "report.html"; // Redirect on successful login
                 } else {
@@ -202,8 +197,8 @@
                 }
             })
             .catch(error => {
-    	    console.error('Error:', error);
-            document.getElementById('errorMessage').textContent = `An error occurred: ${error.message}`;
+                console.error('Error:', error);
+                document.getElementById('errorMessage').textContent = `An error occurred: ${error.message}`;
             });
         });
     </script>
