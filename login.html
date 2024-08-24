@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anti-Ragging Complaint Portal - Member Login</title>
+    <title>Lodge a Complaint</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -73,53 +74,19 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
         h2 {
-            font-size: 2em;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .login-form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        .login-form label {
-            font-weight: bold;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .login-form input[type="text"],
-        .login-form input[type="password"] {
+        iframe {
             width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .login-form input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            background-color: #007BFF;
-            color: #fff;
+            height: 600px;
             border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .login-form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-        .error-message {
-            color: red;
-            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -138,7 +105,7 @@
             <img src="image/logo.png" alt="Anti-Ragging Squad Logo">
         </div>
         <h1>Anti-Ragging Complaint Portal</h1>
-        <h2>Haldia Institute of Technology</h2>
+        <h1>Haldia Institute of Technology</h1>
     </header>
 
     <nav>
@@ -152,56 +119,13 @@
     </nav>
 
     <div class="content">
-        <h2>Members Login</h2>
-        <div class="login-form">
-            <form id="loginForm">
-                <div class="error-message" id="errorMessage"></div>
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username">
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-
-                <input type="submit" value="Login">
-            </form>
-        </div>
+        <h2>Lodge a Complaint</h2>
+        <iframe src="https://script.google.com/macros/s/AKfycbzjaNxDzKQtUflSlL2r5H5RJBF7AmK77fMshUCYKQtb6EiD9uYP-m5qMzF_J6_Ov5c/exec"></iframe>
     </div>
 
     <footer>
         <p>&copy; 2024 Anti-Ragging Squad. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            fetch('https://script.google.com/macros/s/AKfycbwBHWBjHrwsOmULy9vF5W1y1u6lMiOZz2xL4a2domVepxAloiVKE00Lwqwkb8tEOlRt/exec', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    username: username,
-                    password: password
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    window.location.href = "report.html"; // Redirect on successful login
-                } else {
-                    document.getElementById('errorMessage').textContent = data.message;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('errorMessage').textContent = `An error occurred: ${error.message}`;
-            });
-        });
-    </script>
 </body>
 
 </html>
