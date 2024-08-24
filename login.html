@@ -1,92 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Under Construction</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Additional inline styles for specific page adjustments */
-        .construction-page {
-            background-color: #f8f9fa;
-            padding: 50px;
-            text-align: center;
-        }
-        .construction-page h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 20px;
-            font-family: Arial, sans-serif;
-        }
-        .construction-page p {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 30px;
-            font-family: Arial, sans-serif;
-        }
-        .construction-page img {
-            width: 200px;
-            margin-top: 20px;
-        }
-        .back-link {
-            font-size: 1.2em;
-            color: #007bff;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>My Website</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="complaint.html">Lodge a Complaint</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="stats.html">Statistics</a></li>
-                    <li><a href="report.html">Report</a></li>
-                    <li><a href="member.html">Members Area</a></li>
-                </ul>
-            </nav><!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lodge a Complaint</title>
+    <title>Anti-Ragging Complaint Portal - Member Login</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-    async function handleSubmit(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        var formData = new FormData(event.target);
-        
-        try {
-            let response = await fetch("https://script.google.com/macros/s/AKfycbwCPEcAbtsZzdEoe1ymU8nUsshwBV1Ao1C5jrdnCMhJy64IWtMfAZy5ZACFdTwyNNze2g/exec", {
-                method: 'POST',
-                body: formData
-            });
-
-            let result = await response.text();
-            
-            // Display the reference ID in a message
-            alert(result); // Show the reference ID in an alert
-            
-            // Clear the form fields
-            event.target.reset(); // Clear the form fields
-            
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    }
-</script>
-
-
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -105,6 +24,8 @@
             border-bottom: 5px solid #007BFF;
         }
 
+
+
         .logo-container {
             position: absolute;
             top: 20px;
@@ -115,6 +36,7 @@
             overflow: hidden;
             border: 3px solid #fff;
         }
+
 
         .logo-container img {
             width: 100%;
@@ -154,61 +76,53 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         h2 {
-            text-align: center;
+            font-size: 2em;
             margin-bottom: 20px;
         }
 
-        form {
-            width: 100%;
+        .login-form {
+            max-width: 400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 15px;
+            text-align: left;
         }
 
-        label {
+        .login-form label {
             font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
         }
 
-        input, select, textarea {
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 1em;
         }
 
-        textarea {
-            resize: vertical;
-            height: 100px;
-        }
-
-        .full-width {
-            grid-column: 1 / 3;
-        }
-
-        .submit-btn {
-            grid-column: 1 / 3;
-            text-align: center;
-        }
-
-        .submit-btn button {
-            padding: 10px 20px;
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
             background-color: #007BFF;
             color: #fff;
             border: none;
             border-radius: 4px;
+            font-weight: bold;
             cursor: pointer;
-            font-size: 1em;
-            width: 100%;
         }
 
-        .submit-btn button:hover {
+        .login-form input[type="submit"]:hover {
             background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            margin-bottom: 15px;
         }
 
         footer {
@@ -226,8 +140,9 @@
         <div class="logo-container">
             <img src="image/logo.png" alt="Anti-Ragging Squad Logo">
         </div>
-        <h1>Anti-Ragging Squad</h1>
-	<h1>Haldia Institute of Technology</h1>
+        <h1>Anti-Ragging Complaint Portal</h1>
+        <h1>Haldia Institute of Technology</h1>
+
     </header>
 
     <nav>
@@ -236,38 +151,62 @@
             <li><a href="complaint.html">Lodge a Complaint</a></li>
             <li><a href="login.html">Members Area</a></li>
             <li><a href="report.html">Report Status</a></li>
-	    <li><a href="member.html">committee Member</a></li>
-
+            <li><a href="member.html">Committee Member</a></li>
         </ul>
     </nav>
 
-    <div class="construction-page">
-        <h1>Under Construction</h1>
-        <p>We are currently working on the login page. Please check back later.</p>
-        <img src="https://via.placeholder.com/200x150?text=Under+Construction" alt="Under Construction">
-        <a href="index.html" class="back-link">Back to Home</a>
+    <div class="content">
+        <h2>Members Login</h2>
+        <div class="login-form">
+            <form id="loginForm">
+                <div class="error-message" id="errorMessage"></div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
     </div>
+
     <footer>
         <p>&copy; 2024 Anti-Ragging Squad. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('https://script.google.com/macros/s/AKfycbwBHWBjHrwsOmULy9vF5W1y1u6lMiOZz2xL4a2domVepxAloiVKE00Lwqwkb8tEOlRt/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'username': username,
+                    'password': password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response').textContent = data.message;
+                if (data.status === "success") {
+                    window.location.href = "report.html"; // Redirect on successful login
+                } else {
+                    document.getElementById('errorMessage').textContent = data.message;
+                }
+            })
+            .catch(error => {
+    	    console.error('Error:', error);
+            document.getElementById('errorMessage').textContent = `An error occurred: ${error.message}`;
+            });
+        });
+    </script>
 </body>
 
-</html>
-
-        </div>
-    </header>
-
-    <div class="construction-page">
-        <h1>Under Construction</h1>
-        <p>We are currently working on the login page. Please check back later.</p>
-        <img src="https://via.placeholder.com/200x150?text=Under+Construction" alt="Under Construction">
-        <a href="index.html" class="back-link">Back to Home</a>
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Website. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
 </html>
