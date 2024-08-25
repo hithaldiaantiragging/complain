@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anti-Ragging Squad Members</title>
-   
+    <title>Anti-Ragging Complaint Portal</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -75,27 +75,59 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-       
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .hero {
+            text-align: center;
+            padding: 30px 0;
             margin-bottom: 20px;
         }
 
-        table th, table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: left;
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0 0 20px;
         }
 
-        table th {
-            background-color: #007BFF;
-            color: #fff;
+        .hero p {
+            font-size: 1.2em;
+            margin: 0 0 30px;
         }
 
-        table tr:nth-child(even) {
-            background-color: #f2f2f2;
+        .button {
+            background-color: #FFC107;
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #FF9800;
+        }
+
+        .features {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .features .feature {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .features img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .features h3 {
+            font-size: 1.8em;
+            margin: 0 0 10px;
+        }
+
+        .features p {
+            font-size: 1.1em;
+            margin: 0;
         }
 
         footer {
@@ -104,6 +136,91 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
+        }
+
+        /* Responsive Design for Tablets and Mobiles */
+        @media (max-width: 768px) {
+            .content {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .hero h2 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Responsive Design for Mobiles (max-width: 480px) */
+        @media (max-width: 480px) {
+            header {
+                padding: 20px;
+            }
+
+            .content {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .hero h2 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .logo-container {
+                width: 70px;
+                height: 70px;
+                top: 10px;
+                left: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            nav ul li a {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+
+            .features img {
+                width: 70px;
+                height: auto;
+            }
+
+            .features h3 {
+                font-size: 1.5em;
+            }
+
+            .features p {
+                font-size: 1em;
+            }
+        }
+
+        /* Make images responsive */
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -122,32 +239,17 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="complaint.html">Lodge a Complaint</a></li>
             <li><a href="login.html">Members Area</a></li>
-            <li><a href="member.html">Committee Members</a></li>
+            <li><a href="member.html">Committee Member</a></li>
         </ul>
     </nav>
 
-
-
-<div class="content">
+    <div class="content">
         <section class="hero">
             <h2>Welcome to the Anti-Ragging Complaint Portal</h2>
             <p>Dedicated to ensuring a safe and respectful environment for all students.</p>
             <a href="complaint.html" class="button">Lodge a Complaint</a>
         </section>
-<!--
-        <section class="guidelines">
-            <div class="container">
-                <h2>AICTE Recommended Guidelines</h2>
-                <ul>
-                    <li><img src="image/confidential-icon.png" alt="Confidential Reporting" class="icon"> Ensure strict compliance with anti-ragging measures.</li>
-                    <li><img src="image/quick-resolution.png" alt="Quick Resolution" class="icon"> Provide clear and accessible channels for lodging complaints.</li>
-                    <li><img src="image/support.png" alt="Support and Guidance" class="icon"> Maintain confidentiality and take immediate action on complaints.</li>
-                    <li><img src="training-icon.png" alt="Training" class="icon"> Regularly train staff and students on anti-ragging policies.</li>
-                    <li><img src="awareness-icon.png" alt="Awareness" class="icon"> Promote awareness about the consequences of ragging.</li>
-                </ul>
-            </div>
-        </section>
--->
+
         <section class="features">
             <div class="container">
                 <div class="feature">
@@ -169,15 +271,7 @@
         </section>
     </div>
 
-
-
-
-
-
-
-
-
-<footer>
+    <footer>
         <p>&copy; 2024 Anti-Ragging Squad. All rights reserved.</p>
     </footer>
 </body>
