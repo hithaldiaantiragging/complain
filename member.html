@@ -165,6 +165,53 @@
             .features p {
                 font-size: 1em;
             }
+	/* Table adjustments for small screens */
+    table {
+        width: 100%;
+        border: 0; /* Remove borders for better readability */
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ccc; /* Add bottom border for separation */
+    }
+
+    table th {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+    table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    table td {
+        border: none; /* Remove border from cells */
+        padding: 10px;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label); /* Add labels for cells */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+   
+    }
+ /* Adjustments for text */
+    h2 {
+        font-size: 1.2em;
     }
 
     /* Make images responsive */
