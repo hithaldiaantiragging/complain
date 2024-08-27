@@ -157,12 +157,21 @@
             background-color: #0056b3;
         }
 	.info-message {
-            grid-column: 1 / 3;
-            text-align: center;
-            font-size: 0.9em;
-            color: #555;
-            margin-top: 15px;
-        }
+    color: #FF0000; /* Red color */
+    font-weight: bold;
+    background-color: #FFE5E5; /* Light red background for emphasis */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95em; /* Slightly smaller font for better readability */
+}
+
+.info-message a {
+    color: #D60000; /* Darker red for links */
+    text-decoration: underline;
+}
+
 
         footer {
             background-color: #333;
@@ -186,14 +195,11 @@
                 width: 95%;
                 padding: 10px;
             }
-	    form {
-                grid-template-columns: 1fr;
-            }
-
+	    
             .info-message {
-                font-size: 0.85em;
-                padding: 5px;
-            }
+        font-size: 0.85em; /* Adjust font size for smaller screens */
+        padding: 8px;
+    }
 
             .hero h2 {
                 font-size: 1.8em;
@@ -328,7 +334,7 @@
         <button type="submit">Submit Complaint</button>
     </div>
     <div class="info-message">
-               If you have any evidence related to your complaint (e.g., images, videos, or documents), kindly email them to hithaldiaantiragging@gmail.com. Please be sure to mention that the attachments correspond to the information provided in the "Ragging Details" section of the complaint form.
+               Note:- If you have any evidence related to your complaint (e.g., images, videos, or documents), kindly email them to hithaldiaantiragging@gmail.com. Please be sure to mention that the attachments correspond to the information provided in the "Ragging Details" section of the complaint form.
 
     </div>
 </form>
