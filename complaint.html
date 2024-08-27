@@ -211,75 +211,97 @@
             margin-top: 20px;
         }
 	 @media (max-width: 480px) {
-    body {
-        width: 100vw; /* Set the body width to the viewport width */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        width: 100vw; /* Ensure header takes the full viewport width */
-        padding: 15px; /* Adjust padding */
-    }
-
-    .logo-container {
-        width: 50px; /* Adjust logo size */
-        height: 50px;
-        top: 10px;
-        left: 10px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        padding: 0;
-        background-color: #444;
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Reduced margin between navigation items */
-    }
-
-    nav ul li a {
-        padding: 8px 10px; /* Adjusted padding for links */
-        font-size: 0.9rem; /* Reduced font size */
+	 header h1 {
+                    font-size: 1rem; /* Adjust font size as needed */
+                    line-height: 1.2;  /* Adjust line spacing */
+                    margin: 20px 0;     /* Reduce top and bottom margins */
+                
+            }
+            header {
+                padding: 20px;
+            }
+	    body {
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
     }
 
     .content {
-        width: 100vw; /* Ensure content takes the full viewport width */
-        padding: 15px; /* Reduced padding */
-        box-sizing: border-box; /* Ensure padding and borders are included in the width */
+        min-width: 480px; /* Set a minimum width to trigger the scrollbar */
+        overflow-x: auto; /* Ensure scrolling is available */
     }
 
     form {
-        grid-template-columns: 1fr; /* Single-column layout */
-        gap: 10px; /* Reduced gap */
+        grid-template-columns: 1fr; /* Switch to a single-column layout */
+        gap: 10px;
+    }
+
+    .full-width {
+        grid-column: 1 / 2;
+    }
+
+    input, select, textarea, .submit-btn button {
+        width: 100%;
+        font-size: 1rem;
     }
 
     .submit-btn button {
-        padding: 8px; /* Reduced padding */
-        font-size: 0.9rem; /* Adjusted font size */
+        padding: 10px;
     }
 
     .info-message {
-        font-size: 0.8rem; /* Adjusted font size */
-        padding: 8px; /* Reduced padding */
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
     }
 
     label {
-        font-size: 0.8rem; /* Adjusted font size */
+        font-size: 0.9rem;
     }
 
-    footer {
-        padding: 10px; /* Reduced padding */
-        width: 100vw; /* Ensure footer takes the full viewport width */
-        box-sizing: border-box; /* Ensure padding and borders are included in the width */
+            .hero h2 {
+                font-size: 1.8em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .logo-container {
+                width: 50px;
+                height: 50px;
+                top: 10px;
+                left: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            nav ul li a {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+
+            .features img {
+                width: 70px;
+                height: auto;
+            }
+
+            .features h3 {
+                font-size: 1.5em;
+            }
+
+            .features p {
+                font-size: 1em;
+            }
     }
 
-    img {
-        max-width: 100%; /* Ensure images are responsive */
-    }
-}
     /* Make images responsive */
     img {
         max-width: 100%;
@@ -387,3 +409,4 @@
 </body>
 
 </html>
+
