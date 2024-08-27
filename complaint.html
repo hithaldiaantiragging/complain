@@ -193,6 +193,19 @@
             header {
                 padding: 20px;
             }
+	    form {
+        	grid-template-columns: 1fr; /* Single-column layout for small screens */
+        	gap: 10px; /* Reduce the gap between fields */
+    	    }
+
+    	   .full-width {
+        	grid-column: 1 / 2; /* Ensure full-width fields still span the entire width */
+            }
+
+    .submit-btn button {
+        width: 100%; /* Ensure the submit button takes full width */
+        font-size: 1rem; /* Adjust the font size for better readability */
+    }
 
             .content {
                 width: 95%;
@@ -200,9 +213,9 @@
             }
 	    
              .info-message {
-        font-size: 0.9rem;
-        padding: 8px 10px;
-    }
+        	font-size: 0.9rem;
+        	padding: 8px 10px;
+    	    }
 
             .hero h2 {
                 font-size: 1.8em;
