@@ -157,23 +157,23 @@
             background-color: #0056b3;
         }
 	.info-message {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px 15px;
-    border-left: 5px solid #f5c6cb;
-    margin: 20px 0;
-    font-weight: bold;
-    width: 100%; /* Takes the full width of its container */
-    box-sizing: border-box; /* Ensures padding does not add extra width */
-    text-align: center; /* Centers the text */
-    font-size: 1rem; /* Adjust font size as needed */
-}
+    		background-color: #f8d7da;
+    		color: #721c24;
+    		padding: 10px 15px;
+    		border-left: 5px solid #f5c6cb;
+    		margin: 20px 0;
+    		font-weight: bold;
+    		width: 100%; /* Takes the full width of its container */
+    		box-sizing: border-box; /* Ensures padding does not add extra width */
+    		text-align: center; /* Centers the text */
+    		font-size: 1rem; /* Adjust font size as needed */
+        }
 
 
-.info-message a {
-    color: #D60000; /* Darker red for links */
-    text-decoration: underline;
-}
+	.info-message a {
+    		color: #D60000; /* Darker red for links */
+    		text-decoration: underline;
+	}
 
 
         footer {
@@ -194,28 +194,34 @@
                 padding: 20px;
             }
 	    form {
-        	grid-template-columns: 1fr; /* Single-column layout for small screens */
-        	gap: 10px; /* Reduce the gap between fields */
-    	    }
-
-    	   .full-width {
-        	grid-column: 1 / 2; /* Ensure full-width fields still span the entire width */
-            }
-
-    .submit-btn button {
-        width: 100%; /* Ensure the submit button takes full width */
-        font-size: 1rem; /* Adjust the font size for better readability */
+        grid-template-columns: 1fr; /* Single-column layout for small screens */
+        gap: 10px; /* Reduce the gap between fields */
     }
 
-            .content {
-                width: 95%;
-                padding: 10px;
-            }
-	    
-             .info-message {
-        	font-size: 0.9rem;
-        	padding: 8px 10px;
-    	    }
+    .full-width {
+        grid-column: 1 / 2; /* Ensure full-width fields still span the entire width */
+    }
+
+    input, select, textarea, .submit-btn button {
+        width: 100%; /* Ensure all input fields and buttons take full width */
+        font-size: 1rem; /* Adjust font size for better readability */
+    }
+
+    .submit-btn button {
+        padding: 10px; /* Adjust padding for better button appearance on small screens */
+    }
+
+    .info-message {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        width: 100%; /* Ensure message takes the full form width */
+        box-sizing: border-box; /* Ensure padding does not add extra width */
+        text-align: center;
+    }
+
+    label {
+        font-size: 0.9rem; /* Adjust label font size for small screens */
+    }
 
             .hero h2 {
                 font-size: 1.8em;
