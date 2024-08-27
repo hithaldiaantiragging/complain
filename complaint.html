@@ -193,35 +193,50 @@
             header {
                 padding: 20px;
             }
-	    form {
+	    body {
+        overflow-x: auto; /* Enables horizontal scrolling */
+    }
+
+    .content {
+        width: 480px; /* Set a fixed width to enable scrolling */
+    }
+
+    form {
         grid-template-columns: 1fr; /* Single-column layout for small screens */
-        gap: 10px; /* Reduce the gap between fields */
+        gap: 10px;
     }
 
     .full-width {
-        grid-column: 1 / 2; /* Ensure full-width fields still span the entire width */
+        grid-column: 1 / 2;
     }
 
     input, select, textarea, .submit-btn button {
-        width: 100%; /* Ensure all input fields and buttons take full width */
-        font-size: 1rem; /* Adjust font size for better readability */
+        width: 100%;
+        font-size: 1rem;
     }
 
     .submit-btn button {
-        padding: 10px; /* Adjust padding for better button appearance on small screens */
+        padding: 10px;
     }
 
     .info-message {
         font-size: 0.9rem;
         padding: 8px 10px;
-        width: 100%; /* Ensure message takes the full form width */
-        box-sizing: border-box; /* Ensure padding does not add extra width */
+        width: 100%;
+        box-sizing: border-box;
         text-align: center;
     }
 
     label {
-        font-size: 0.9rem; /* Adjust label font size for small screens */
+        font-size: 0.9rem;
     }
+
+    /* Force a scrollbar if content overflows */
+    .content {
+        overflow-x: scroll;
+        padding: 0 10px;
+    }
+}
 
             .hero h2 {
                 font-size: 1.8em;
