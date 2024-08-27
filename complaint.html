@@ -157,15 +157,18 @@
             background-color: #0056b3;
         }
 	.info-message {
-    color: #FF0000; /* Red color */
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px 15px;
+    border-left: 5px solid #f5c6cb;
+    margin: 20px 0;
     font-weight: bold;
-    background-color: #FFE5E5; /* Light red background for emphasis */
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 0.95em; /* Slightly smaller font for better readability */
+    width: 100%; /* Takes the full width of its container */
+    box-sizing: border-box; /* Ensures padding does not add extra width */
+    text-align: center; /* Centers the text */
+    font-size: 1rem; /* Adjust font size as needed */
 }
+
 
 .info-message a {
     color: #D60000; /* Darker red for links */
@@ -196,9 +199,9 @@
                 padding: 10px;
             }
 	    
-            .info-message {
-        font-size: 0.85em; /* Adjust font size for smaller screens */
-        padding: 8px;
+             .info-message {
+        font-size: 0.9rem;
+        padding: 8px 10px;
     }
 
             .hero h2 {
